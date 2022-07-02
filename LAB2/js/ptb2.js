@@ -15,7 +15,7 @@ function io() {
   } else {
     var delta = Math.pow(b, 2) - 4 * a * c;
 
-    if (delta < 0) {
+    if (delta < 0 || a == 0) {
       document.getElementById("Output").innerHTML = "phương trình vô nghiệm";
       document.getElementById("result").innerHTML = ""
     } else if (delta == 0) {
