@@ -17,6 +17,7 @@ function io() {
 
     if (delta < 0) {
       document.getElementById("Output").innerHTML = "phương trình vô nghiệm";
+      document.getElementById("result").innerHTML = ""
     } else if (delta == 0) {
       document.getElementById("Output").innerHTML =
         "phương trình co nghiệm kép";
@@ -28,7 +29,7 @@ function io() {
       var x1 = (-b + Math.sqrt(delta)) / (2 * a);
       var x2 = (-b - Math.sqrt(delta)) / (2 * a);
       document.getElementById("result").innerHTML =
-        "ket qua: x1 = " + x1 + " x2 = " + x2;
+        "ket qua: x1 = " + x1 + " | x2 = " + x2;
     }
   }
 }
