@@ -16,6 +16,6 @@ function play() {
             document.getElementById("OutputKetQua").innerHTML = "Giá trị của bạn nhỏ hơn số bí mật"
         } else if (input > secret) {
             document.getElementById("OutputKetQua").innerHTML = "Giá trị của bạn lớn hơn số bí mật"
-        } else document.getElementById("OutputKetQua").innerHTML = "Sai rồi bạn hãy đoán lại"
+        }
     }
 }
