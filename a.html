@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucent</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // show the given page, hide the rest
+        function show(elementID) {
+            // find the requested page and alert if it's not found
+            const ele = document.getElementById(elementID);
+            if (!ele) {
+                alert("no such element");
+                return;
+            }
+
+            // get all pages, loop through them and hide them
+            const pages = document.getElementsByClassName('row');
+            for (let i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+
+            // then show the requested page
+            ele.style.display = '';
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark" id="top">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="index.html">
+                <img class="rounded-pill" src="img/logo-social.png" alt="">
+            </a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item" id="dropdown">
+                    <a class="nav-link" href="#">Sản phẩm ▼</a>
+                    <div class="dropdown-one">
+                        <div id="link1" class="dItem" href="#">
+                            <a href="#">Điện thoại</a>
+                            <!--             Inside Dropdown -->
+                            <div class="dropdown-two1">
+                                <div class="dItem" id="file" href="#">
+                                    <a href="#">iPhone</a>
+                                    <a href="#">Samsung</a>
+                                    <a href="#">Xiaomi</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link2" class="dItem" href="#">
+                            <a href="#">Laptop</a>
+                            <!--             Inside Dropdown -->
+                            <div class="dropdown-two2">
+                                <div class="dItem" id="file" href="#">
+                                    <a href="#">ASUS</a>
+                                    <a href="#">HP</a>
+                                    <a href="#">Lenovo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link3" class="dItem" href="#">
+                            <a href="#">Máy tính bảng</a>
+                            <!--             Inside Dropdown -->
+                            <div class="dropdown-two3">
+                                <div class="dItem" id="file" href="#">
+                                    <a href="#">iPad</a>
+                                    <a href="#">Tablet</a>
+                                    <a href="#">Mipad</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link4" class="dItem" href="#">
+                            <a href="#">Tai nghe</a>
+                            <!--             Inside Dropdown -->
+                            <div class="dropdown-two4">
+                                <div class="dItem" id="file" href="#">
+                                    <a href="#">Air Pod</a>
+                                    <a href="#">JBL</a>
+                                    <a href="#">Mi Buds</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link5" class="dItem" href="#">
+                            <a href="#">Phụ kiện</a>
+                            <!--             Inside Dropdown -->
+                            <div class="dropdown-two5">
+                                <div class="dItem" id="file" href="#">
+                                    <a href="#">Củ sạc</a>
+                                    <a href="#">Dây sạc</a>
+                                    <a href="#">Sạc dự phòng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giỏ hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Thanh toán</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#demo">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng ký</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Tìm kiếm">
+            <button class="btn btn-primary" type="button">Search</button>
+        </form>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Liên hệ</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Facebook: <a href="https://www.facebook.com/lucent019/">Hoàng Lực</a></p>
+            <p>Phone <a href="#">0764309428</a></p>
+            <p>Zalo: <a href="#">0764309428</a></p>
+            <p>Email: <a href="#">nguyenhohoangluc@gmail.com</a></p>
+        </div>
+    </div>
+    <ul class="pagination justify-content-left pagination-lg" style="margin:20px 0" id="headpagin">
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page1');">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page2');">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page3');">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page4');">4</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page5');">5</a></li>
+    </ul>
+    <div class="row" id="page1">
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPhone/iphone-12-promax.jpg" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPhone 12 Pro Max</h4>
+                    <p class="card-text">iPhone 12 Pro Max 128Gb</p>
+                    <p class="card-title">17.990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPhone/iphone-13-pro-aar-xanh-la-didongviet_4.jpg"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPhone 13 Pro Max</h4>
+                    <p class="card-text">iPhone 13 Pro Max 128Gb</p>
+                    <p class="card-title">21.250.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPhone/iphone-11-64gb-chinh-hang_3.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPhone 11 Pro Max</h4>
+                    <p class="card-text">iPhone 11 Pro Max 128Gb</p>
+                    <p class="card-title">14.290.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Samsung/S22-ultra-256gb-5G.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Galaxy S22 Ultra</h4>
+                    <p class="card-text">S22 Ultra 5G 256Gb</p>
+                    <p class="card-title">32.190.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Samsung/samsung-galaxy-a73-5g-xanh-128gb.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Galaxy A73</h4>
+                    <p class="card-text">A73 5G 256Gb </p>
+                    <p class="card-title">10.690.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Samsung/Zfold3.png" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">ZFold 3</h4>
+                    <p class="card-text">ZFold 3 5G 256Gb</p>
+                    <p class="card-title">36.990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/xiaomi/redmi-k40-128g-5g.jpg" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Redmi K40</h4>
+                    <p class="card-text">Redmi K40 5G 128Gb</p>
+                    <p class="card-title">7.890.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/xiaomi/xiaomi-mi-mix-4-32-600x600.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Mi Mix 4</h4>
+                    <p class="card-text">Mi Mix 4 5G 128Gb</p>
+                    <p class="card-title">18.390.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/xiaomi/mi_11_ultra.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Mi 11 Ultra</h4>
+                    <p class="card-text">Mi 11 Ultra 5G 256Gb</p>
+                    <p class="card-title">17.490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    </div>
+    <div class="row" id="page2" style="display:none">
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Asus/RogStrixG15-R7-8-GTX-512-156-18490.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Asus Rog Strix G15</h4>
+                    <p class="card-text">CPU: AMD Ryzen 7 5800H<br>RAM: 8Gb<br>VGA: GeForce GTX<br>SSD: 512Gb<br>
+                        Monitor: 15.6"</p>
+                    <p class="card-title">18.490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Asus/Vivobook13-Pentium-8-UHD-256-133-15790.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Vivobook 13</h4>
+                    <p class="card-text">CPU: Pentium<br>RAM: 8Gb<br>VGA: UHD Graphics<br>SSD: 256Gb<br>
+                        Monitor: 13.3"</p>
+                    <p class="card-title">15.790.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Asus/Zenbook14x-R5-8-Radeon-512-14-23690.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Zenbook 14X</h4>
+                    <p class="card-text">CPU: AMD Ryzen 5 4600H<br>RAM: 8Gb<br>VGA: Radeon HD Graphics<br>SSD: 512Gb<br>
+                        Monitor: 14"</p>
+                    <p class="card-title">23.690.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Hp/EnvyX360-i71165G7-8-IrisXGraphics-512-133-24490.webp"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Envy X360</h4>
+                    <p class="card-text">CPU: i7-1165G7<br>RAM: 8Gb<br>VGA: Iris X Graphics<br>SSD: 512Gb<br>
+                        Monitor: 13.3"</p>
+                    <p class="card-title">24.490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Hp/Victus16-R5-8-GTX1650-512-161-19990.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Victus 16</h4>
+                    <p class="card-text">CPU: AMD Ryzen 5 4600H<br>RAM: 8Gb<br>VGA: GeForce GTX1650<br>SSD: 512Gb<br>
+                        Monitor: 16.1"</p>
+                    <p class="card-title">19.990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/Hp/ZbookFirefly14G8-i51135G7-8-IrisXeGraphics-512-156-30490.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Zbook Firefly 14 G8</h4>
+                    <p class="card-text">CPU: i5-1135G7<br>RAM: 8Gb<br>VGA: Iris Xe Graphics<br>SSD: 512Gb<br>
+                        Monitor: 15.6"</p>
+                    <p class="card-title">30.490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Lenovo/Ideapad5Pro-R75800H-16-RTX3050-156-27990.webp"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Ideapad 5 Pro</h4>
+                    <p class="card-text">CPU: AMD Ryzen 7 5800H<br>RAM: 16Gb<br>VGA: RTX3050<br>SSD: 512Gb<br>
+                        Monitor: 15.6"</p>
+                    <p class="card-title">27.990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Lenovo/legion5-r74800H-8-1650Ti-512-156-25890.webp"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Legion 5</h4>
+                    <p class="card-text">CPU: AMD Ryzen 7 4800H<br>RAM: 8Gb<br>VGA: GeForce GTX1650Ti<br>SSD: 512Gb<br>
+                        Monitor: 15.6"</p>
+                    <p class="card-title">25.890.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/Lenovo/ThinkPadE15-i51135G7-8-IrisXeGraphics-256-156-17890.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">ThinkPad E15</h4>
+                    <p class="card-text">CPU: i5-1135G7<br>RAM: 8Gb<br>VGA: Iris Xe Graphics<br>SSD: 256Gb<br>
+                        Monitor: 15.6"</p>
+                    <p class="card-title">17.890.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    </div>
+    <div class="row" id="page3" style="display:none">
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPad/iPadAir5-64-15800.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPad Air 5</h4>
+                    <p class="card-text">iPad Air 5 64Gb</p>
+                    <p class="card-title">15.800.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPad/ipad-mini-6-64-13190.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPad mini 6</h4>
+                    <p class="card-text">iPad mini 6 64Gb</p>
+                    <p class="card-title">13.190.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/iPad/ipad-pro-11-128-19790.jpg" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">iPad 11 Pro</h4>
+                    <p class="card-text">iPad 11 Pro 128Gb</p>
+                    <p class="card-title">19.790.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/tablet/tab-s6-128-15000.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Samsung Galaxy Tab S6</h4>
+                    <p class="card-text">Samsung Galaxy Tab S6 128Gb</p>
+                    <p class="card-title">15.000.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/tablet/tab-s7-128-18000.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Samsung Galaxy Tab S7</h4>
+                    <p class="card-text">Samsung Galaxy Tab S7 128Gb</p>
+                    <p class="card-title">18.000.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/tablet/tab_s8-128-19590.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Samsung Galaxy Tab S8</h4>
+                    <p class="card-text">Samsung Galaxy Tab S8 128Gb</p>
+                    <p class="card-title">19.590.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mipad/mipad2-64-2680.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Mi Pad 2</h4>
+                    <p class="card-text">Xiaomi Mi Pad 2 64Gb</p>
+                    <p class="card-title">2.680.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mipad/mipad4-64-2494.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Mi Pad 4</h4>
+                    <p class="card-text">Xiaomi Mi Pad 2 64Gb</p>
+                    <p class="card-title">2.494.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mipad/mi-pad-5-256-9650.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Mi Pad 5</h4>
+                    <p class="card-text">Xiaomi Mi Pad 5 256Gb</p>
+                    <p class="card-title">9.650.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    </div>
+    <div class="row" id="page4" style="display:none">
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/airpods/airpods-2-2890.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">AirPods 2</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">2.890.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/airpods/airpod-3-4490.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">AirPods 2</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">4.490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/airpods/airpods-pro-4790.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">AirPods Pro</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">4.790.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/JBL/jbl-t115bt-490.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">JBL T115BT</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/JBL/jbl-tune-115-990.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">JBL Tune 115</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/JBL/jbl-live-pro-1990.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">JBL Live Pro</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">1.990.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mibuds/EarbudBasicS-450.webp" alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Earbud Basic S</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">450.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mibuds/earphones-2-basic-590.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Earphones 2 Basic</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">590.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/Mibuds/redmiBuds3Pro-1390.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Redmi Buds 3 Pro</h4>
+                    <p class="card-text">Bluetooth: 5.0</p>
+                    <p class="card-title">1.390.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    </div>
+    <div class="row" id="page5" style="display:none">
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/dock/cu-sac-nhanh-aukey-pa-b3-65w-790.webp" alt="image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Củ sạc nhanh Aukey</h4>
+                    <p class="card-text">Công suất: 65W <br>Output: Type C</p>
+                    <p class="card-title">790.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/dock/cu-sac-nhanh-mophie-20w-pd-type-c_1_1-390.webp"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Củ sạc nhanh Mophie</h4>
+                    <p class="card-text">Công suất: 20W <br>Output: Type C</p>
+                    <p class="card-title">390.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/dock/de-sac-khong-day-magsafe-aukey-lc-a1-15w-390.webp"
+                    alt="image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Đế sạc không dây Magsafe Aukey</h4>
+                    <p class="card-text">Công suất: 15W</p>
+                    <p class="card-title">390.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/cable/BaseusCrystalShineAtoLightning-1_2m-150.jpg"
+                    alt="image" style="width:100%;height: 289.56px;">
+                <div class="card-body">
+                    <h4 class="card-title">Baseus Crystal Shine</h4>
+                    <p class="card-text">USB-A to Lightning <br>Chiều dài: 1.2m</p>
+                    <p class="card-title">150.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/cable/cap-type-c-to-lightning-belkin-caa003bt1-30w-1m-320.webp" alt="image"
+                    style="width:100%;height: 289.56px;">
+                <div class="card-body">
+                    <h4 class="card-title">Belkin</h4>
+                    <p class="card-text">Type C to Lightning 30W <br>Chiều dài: 1m</p>
+                    <p class="card-title">320.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top" src="img/product/cable/cap-type-c-to-type-c-apple-muf72za-1m-490.webp"
+                    alt="image" style="width:100%;height: 294.4px;">
+                <div class="card-body">
+                    <h4 class="card-title">Apple</h4>
+                    <p class="card-text">Type C to Type C <br>Chiều dài: 1m</p>
+                    <p class="card-title">490.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-white">
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/capacity/pin-sac-du-phong-apple-magsafe-mjwy3-3-1460mAh-2290.webp" alt="image"
+                    style="width:100%;height: 314px;">
+                <div class="card-body">
+                    <h4 class="card-title">Apple Magsafe</h4>
+                    <p class="card-text">Dung lượng pin: 1460mAh</p>
+                    <p class="card-title">2.290.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/capacity/pin-sac-du-phong-xiaomi-redmi-20000mah-sac-nhanh-18w-ts-450.webp"
+                    alt="image" style="width:100%;height: 285px;">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Redmi QuickCharge 18W</h4>
+                    <p class="card-text">Dung lượng pin: 20000mAh</p>
+                    <p class="card-title">450.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+            <div class="card" style="width:20rem;margin:20px 0 24px 0">
+                <img class="card-img-top"
+                    src="img/product/capacity/sac-du-phong-anker-power-core-select-a1223-10000-mah-cate_1-390.webp"
+                    alt="image" style="width:100%;height: 318.3px;">
+                <div class="card-body">
+                    <h4 class="card-title">Anker Power Core</h4>
+                    <p class="card-text">Dung lượng pin: 10000mAh</p>
+                    <p class="card-title">390.000đ</p>
+                    <a href="javascript:void(0)" class="btn btn-primary">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    </div>
+    <ul class="pagination justify-content-center pagination-lg" style="margin:20px 0">
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page1');">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page2');">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page3');">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page4');">4</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="show('page5');">5</a></li>
+    </ul>
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+        <h1>About</h1>
+        <p>Tiên phong trong lĩnh vực trao đổi và giao thương những mặt hàng điện tử với giá cả
+            bám sát thị trường. Mang lại cho khách hàng những sản phẩm chất lượng và đáng tin cậy
+            cùng với đội ngũ chăm sóc khách hàng thân thiện, luôn sẵn sàng phục vụ.
+        </p>
+    </div>
+</body>
+
+</html>
