@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  width: 50%;
+}
+
+td {
+  text-align: center;
+  font-size: 18px;
+}
+
+input {
+  width: 90%;
+}
+
+#pricelist {
+  width: 120px;
+  height: 30px;
+  font-size: 18px;
+}
+
+#tong,
+#finalPrice,
+#bill {
+  font-weight: bold;
+}

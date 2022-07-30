@@ -1,0 +1,46 @@
+h1 {
+  text-align: center;
+}
+
+.maSinhVien,
+.hoTen,
+.mail,
+.sex,
+.favor,
+.country,
+.note,
+.btn {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.maSinhVien input,
+.hoTen input,
+.mail input {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+}
+
+hr {
+  width: 50%;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: aqua;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: orangered;
+  color: white;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form đăng ký</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <h1>Đăng ký thành viên</h1>
+    <div class="maSinhVien">
+      <label for="">Mã sinh viên:</label><br />
+      <input type="text" name="" id="id" /><br />
+    </div>
+    <div class="hoTen">
+      <label for="">Họ và Tên:</label><br />
+      <input type="text" name="" id="name" /><br />
+    </div>
+    <div class="mail">
+      <label for="">Email:</label><br />
+      <input type="text" name="" id="email" /><br />
+    </div>
+    <div class="sex">
+      <label for="">Giới tính:</label><br />
+      <fieldset id="sex">
+        <div class="form-check">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="nam"
+            name="optradio"
+            value="option1"
+          />
+          Nam
+
+          <input
+            type="radio"
+            class="form-check-input"
+            id="nu"
+            name="optradio"
+            value="option1"
+          />
+          Nữ
+        </div>
+      </fieldset>
+    </div>
+    <div class="favor">
+      <label for="">Sở thích:</label>
+      <fieldset id="favor">
+        <input type="checkbox" name="" id="book" /> Đọc sách
+        <input type="checkbox" name="" id="travel" /> Du lịch
+        <input type="checkbox" name="" id="music" /> Âm nhạc
+        <input type="checkbox" name="" id="food" /> Ẩm thực
+        <input type="checkbox" name="" id="etc" /> Khác
+      </fieldset>
+    </div>
+    <div class="country">
+      <label for="">Quốc Tịch:</label><br />
+      <select name="" id="country">
+        <option value="None">None</option>
+        <option value="vn">Việt Nam</option>
+        <option value="tq">Trung Quốc</option>
+        <option value="jp">Nhật Bản</option></select
+      ><br />
+    </div>
+    <div class="note">
+      <label for="">Ghi chú:</label><br />
+      <textarea name="" id="note" cols="30" rows="10"></textarea><br />
+    </div>
+    <div class="btn">
+      <hr />
+      <button onclick="submit()">Đăng ký</button>
+    </div>
+    <script src="js/form.js"></script>
+  </body>
+</html>

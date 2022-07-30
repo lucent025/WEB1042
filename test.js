@@ -1,10 +1,7 @@
-function chao() {
-  var td = document.getElementById("chuoih2").innerHTML;
-  var ch = document.getElementById("ten").value;
+var tien = 10000
 
-  if (ch.length == 0) {
-    alert("Xin hay nhap ten");
-  } else {
-    alert(td + " " + ch.toUpperCase());
-  }
+for (let i = 0; i < 2; i++) {
+  tien += tien/2;
 }
+lamTron = Math.floor(tien);
+document.getElementById("h1").innerHTML = lamTron.toLocaleString('en-US')

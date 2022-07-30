@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/banHang.css">
+  </head>
+  <body>
+    <h1>
+        <p>Ban hang</p>
+        <select onchange="" id="pricelist">
+            <option value="None">Muc gia</option>
+            <option value="b1000">Duoi 1000</option>
+            <option value="b500">Duoi 500</option>
+            <option value="b200">Duoi 200</option></select>
+            <hr style="width: 50%;">
+    </h1>
+    
+        <table id="table" border="1">
+            <tr>
+                <th><input type="checkbox" name="" id="masterCheck"></th>
+                <th>Hang hoa</th>
+                <th>Don gia</th>
+                <th>So luong</th>
+                <th>Thanh tien</th>
+            </tr>
+            <tbody id="products">
+                <tr>
+                    <td><input type="checkbox" value="700"></td>
+                    <td>iPhone 9</td>
+                    <td class="price">700</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="400"></td>
+                    <td>Samsung</td>
+                    <td class="price">400</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="100"></td>
+                    <td>Nokia</td>
+                    <td class="price">100</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="450"></td>
+                    <td>Sony Xperia</td>
+                    <td class="price">450</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="180"></td>
+                    <td>Motorola</td>
+                    <td class="price">180</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="600"></td>
+                    <td>Oppo</td>
+                    <td class="price">600</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="90"></td>
+                    <td>bPhone</td>
+                    <td class="price">90</td>
+                    <td><input type="text" class="quantity"></td>
+                    <td class="bill">0</td>
+                </tr>
+            </tbody>
+            <tr>
+                <td colspan="4" id="tong">Tong</td>
+                <td id="finalPrice">0</td>
+            </tr>
+        </table>
+    
+    <script src="js/banHang.js"></script>
+  </body>
+</html>
